@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #f4effa;" stylesheets="@Styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.club.Controller.AjouterRVController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3c096c" height="650.0" layoutX="28.0" layoutY="25.0" stroke="#3c096c" strokeType="INSIDE" width="247.0" />
+        <Button layoutX="54.0" layoutY="192.0" mnemonicParsing="false" onAction="#switchToCompte" prefHeight="41.0" prefWidth="194.0" styleClass="NewButton2" text="Compte" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font></Button>
+        <Button layoutX="54.0" layoutY="257.0" mnemonicParsing="false" onAction="#switchToAgenda" prefHeight="41.0" prefWidth="194.0" styleClass="NewButton2" text="Rendez-Vous" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font></Button>
+        <Button layoutX="54.0" layoutY="329.0" mnemonicParsing="false" onAction="#switchToPatients" prefHeight="41.0" prefWidth="194.0" styleClass="NewButton2" text="Patients" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font></Button>
+        <Button layoutX="54.0" layoutY="399.0" mnemonicParsing="false" onAction="#switchToDM" prefHeight="41.0" prefWidth="194.0" styleClass="NewButton2" text="Dossier Médcal" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Button>
+        <Button layoutX="54.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToFicheSuivi" prefHeight="41.0" prefWidth="194.0" styleClass="NewButton2" text="Fiche de Suivi" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Button>
+
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="650.0" layoutX="301.0" layoutY="19.0" stroke="WHITE" strokeType="INSIDE" width="685.0" />
+        <Label layoutX="420.0" layoutY="85.0" prefHeight="56.0" prefWidth="492.0" text="Ajouter un Rendez-Vous" textFill="#3c096c">
+            <font>
+                <Font name="Baskerville Old Face" size="48.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="typeComboBox" layoutX="530.0" layoutY="213.0" prefHeight="38.0" prefWidth="194.0" promptText="Type de rendez-vous">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Consultation" />
+                    <String fx:value="Suivi" />
+                    <String fx:value="Atelier" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <Text fx:id="ajouterPtext" layoutX="409.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter un patient:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Text>
+        <TextField fx:id="nomTextField" layoutX="470.0" layoutY="358.0" prefHeight="26.0" prefWidth="186.0" promptText="nom" style="-fx-border-color: #3c096c; -fx-border-radius: 4;">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+        <TextField fx:id="prenomTextField" layoutX="470.0" layoutY="407.0" prefHeight="26.0" prefWidth="185.0" promptText="prenom" style="-fx-border-color: #3c096c; -fx-border-radius: 4;">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+        <TextField fx:id="ageTextField" layoutX="470.0" layoutY="458.0" prefHeight="26.0" prefWidth="185.0" promptText="age" style="-fx-border-color: #3c096c; -fx-border-radius: 4;">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+        <Text fx:id="infoRVtext" layoutX="409.0" layoutY="513.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Info du rv:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Text>
+        <TextField fx:id="dureeTextField" layoutX="470.0" layoutY="598.0" prefHeight="26.0" prefWidth="185.0" promptText="duree" style="-fx-border-color: #3c096c; -fx-border-radius: 4;">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+        <DatePicker fx:id="datePicker" layoutX="470.0" layoutY="522.0" promptText="date" style="-fx-font-weight: bold; -fx-border-color: #3c096c; -fx-border-radius: 4;" />
+        <TextField fx:id="heureTextField" layoutX="469.0" layoutY="559.0" prefHeight="27.0" prefWidth="186.0" promptText="heure" style="-fx-border-color: #3c096c; -fx-border-radius: 4;">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+        <Button fx:id="ajouterButton" layoutX="882.0" layoutY="607.0" mnemonicParsing="false" onAction="#ajouterRendezVous" styleClass="NewButton" text="Ajouter" />
+      <Text fx:id="Ptext" layoutX="414.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patients:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Text>
+      <ComboBox fx:id="pComb" layoutX="470.0" layoutY="273.0" prefHeight="26.0" prefWidth="186.0" promptText="Patients" style="-fx-font-weight: bold; -fx-background-color: white; -fx-border-color: #3c096c; -fx-border-radius: 4;" />
+      <Text fx:id="typetext" layoutX="414.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Text>
+      <ComboBox fx:id="tComb" layoutX="470.0" layoutY="314.0" prefHeight="26.0" prefWidth="186.0" promptText="Type" style="-fx-font-weight: bold; -fx-background-color: white; -fx-border-color: #3c096c; -fx-border-radius: 4;" />
+      <Text fx:id="infoRVtext1" layoutX="409.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Info du rv:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Text>
+      <DatePicker fx:id="datePicker1" layoutX="470.0" layoutY="522.0" promptText="date" style="-fx-font-weight: bold; -fx-border-radius: 4; -fx-border-color: #3c096c;" />
+      <TextField fx:id="heureTextField1" layoutX="470.0" layoutY="559.0" prefHeight="27.0" prefWidth="186.0" promptText="heure" style="-fx-border-color: #3c096c; -fx-border-radius: 4;">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="dureeTextField1" layoutX="470.0" layoutY="598.0" prefHeight="27.0" prefWidth="186.0" promptText="duree" style="-fx-border-color: #3c096c; -fx-font-weight: bold; -fx-border-radius: 4;" />
+      <Button fx:id="ajouterButton1" layoutX="882.0" layoutY="607.0" mnemonicParsing="false" onAction="#ajouterRendezVous" styleClass="NewButton" text="Ajouter" />
+        <VBox fx:id="ajouterObjVbox" layoutX="369.0" layoutY="360.0" prefHeight="118.0" prefWidth="405.0">
+            <HBox>
+                <TextField fx:id="nomObjectifTextField" promptText="Nom de l'objectif" style="-fx-border-color: #3c096c; -fx-font-weight: bold; -fx-border-radius: 4;" />
+                <ComboBox fx:id="typeObjectifComboBox" promptText="Type d'objectif" style="-fx-border-color: #3c096c; -fx-font-weight: bold; -fx-border-radius: 4; -fx-background-color: white;">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="COURT_TERME" />
+                            <String fx:value="MOYEN_TERME" />
+                            <String fx:value="LONG_TERME" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Button onAction="#ajouterObjectif" style="-fx-border-color: #3c096c; -fx-font-weight: bold; -fx-border-radius: 4; -fx-background-color: white;" text="Ajouter Objectif" />
+
+            </HBox>
+
+               <ListView fx:id="objectifsListView" style="-fx-border-color: #3c096c;" />
+
+        </VBox>
+
+      <TextField fx:id="thematique" layoutX="470.0" layoutY="314.0" prefHeight="27.0" prefWidth="186.0" promptText="thematique" style="-fx-border-color: #3c096c; -fx-font-weight: bold; -fx-border-radius: 4;" />
+      <Text fx:id="infoRVtext2" layoutX="409.0" layoutY="514.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Info du rv:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Text>
+      <DatePicker fx:id="datePicker2" layoutX="470.0" layoutY="522.0" promptText="date" style="-fx-font-weight: bold; -fx-border-radius: 4; -fx-border-color: #3c096c;" />
+      <TextField fx:id="heureTextField2" layoutX="470.0" layoutY="559.0" prefHeight="27.0" prefWidth="186.0" promptText="heure" style="-fx-border-color: #3c096c; -fx-font-weight: bold; -fx-border-radius: 4;" />
+      <TextField fx:id="dureeTextField2" layoutX="470.0" layoutY="598.0" prefHeight="27.0" prefWidth="186.0" promptText="duree" style="-fx-border-color: #3c096c; -fx-font-weight: bold; -fx-border-radius: 4;" />
+      <Button fx:id="ajouterButton2" layoutX="882.0" layoutY="607.0" mnemonicParsing="false" onAction="#ajouterRendezVous" styleClass="NewButton" text="Ajouter" />
+      <ListView fx:id="Plist" layoutX="421.0" layoutY="357.0" prefHeight="128.0" prefWidth="283.0" style="-fx-border-color: #3c096c; -fx-border-radius: 4;" />
+
+
+
+        <StackPane layoutX="184.0" layoutY="122.0" onMouseClicked="#switchToAcceuil">
+            <padding>
+                <Insets bottom="10" left="10" right="10" top="10" />
+            </padding>
+            <children>
+                <ImageView fitHeight="42.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@pics/icons8-home-page-100.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </StackPane>
+        <ImageView fitHeight="58.0" fitWidth="52.0" layoutX="54.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@pics/icon.png" />
+            </image>
+        </ImageView>
+        <Text fill="WHITE" layoutX="123.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cabinet d'Orthophonie" wrappingWidth="151.20001220703125">
+            <font>
+                <Font name="Baskerville Old Face" size="18.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="94.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu" wrappingWidth="72.0">
+            <font>
+                <Font name="Baskerville Old Face" size="20.0" />
+            </font>
+        </Text>
+        <AnchorPane layoutX="58.0" layoutY="163.0" prefHeight="6.0" prefWidth="114.0" style="-fx-background-color: #6e3ba2;" />
+        <ImageView fitHeight="40.0" fitWidth="52.0" layoutX="222.0" layoutY="612.0" onMouseClicked="#switchToConnexion" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@pics/icons8-logout-96.png" />
+            </image>
+        </ImageView>
+
+
+
+    </children>
+</AnchorPane>

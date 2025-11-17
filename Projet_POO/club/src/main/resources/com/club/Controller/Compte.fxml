@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #f4effa;" stylesheets="@Styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.club.Controller.CompteController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3c096c" height="650.0" layoutX="28.0" layoutY="25.0" stroke="#3c096c" strokeType="INSIDE" width="247.0" />
+        <Button layoutX="54.0" layoutY="192.0" mnemonicParsing="false" onAction="#switchToCompte" prefHeight="41.0" prefWidth="194.0" styleClass="NewButton2" text="Compte" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font></Button>
+        <Button layoutX="54.0" layoutY="257.0" mnemonicParsing="false" onAction="#switchToAgenda" prefHeight="41.0" prefWidth="194.0" styleClass="NewButton2" text="Rendez-Vous" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font></Button>
+        <Button layoutX="54.0" layoutY="329.0" mnemonicParsing="false" onAction="#switchToPatients" prefHeight="41.0" prefWidth="194.0" styleClass="NewButton2" text="Patients" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font></Button>
+        <Button layoutX="54.0" layoutY="399.0" mnemonicParsing="false" onAction="#switchToDM" prefHeight="41.0" prefWidth="194.0" styleClass="NewButton2" text="Dossier Médcal" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Button>
+        <Button layoutX="54.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToFicheSuivi" prefHeight="41.0" prefWidth="194.0" styleClass="NewButton2" text="Fiche de Suivi" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Button>
+
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="650.0" layoutX="301.0" layoutY="19.0" stroke="WHITE" strokeType="INSIDE" width="685.0" />
+      <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#3c096c" height="51.0" layoutX="336.0" layoutY="232.0" stroke="#f4effa" strokeType="INSIDE" width="266.0" />
+      <Label layoutX="413.0" layoutY="86.0" prefHeight="56.0" prefWidth="457.0" text="ORTHOPHONISTE" textFill="#3c096c">
+         <font>
+            <Font name="Baskerville Old Face" size="48.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#3c096c" height="51.0" layoutX="666.0" layoutY="232.0" stroke="#f4effa" strokeType="INSIDE" width="266.0" />
+      <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#3c096c" height="51.0" layoutX="336.0" layoutY="324.0" stroke="#f4effa" strokeType="INSIDE" width="266.0" />
+      <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#3c096c" height="51.0" layoutX="666.0" layoutY="325.0" stroke="#f4effa" strokeType="INSIDE" width="266.0" />
+      <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#3c096c" height="51.0" layoutX="336.0" layoutY="415.0" stroke="#f4effa" strokeType="INSIDE" width="266.0" />
+      <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#3c096c" height="51.0" layoutX="666.0" layoutY="415.0" stroke="#f4effa" strokeType="INSIDE" width="266.0" />
+      <Button layoutX="759.0" layoutY="591.0" mnemonicParsing="false" onAction="#switchToAjouterCompte" styleClass="NewButton" text="Ajouter Un Orthophoniste" />
+      <Text fill="WHITE" layoutX="347.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom:">
+         <font>
+            <Font name="Baskerville Old Face" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="679.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prénom:">
+         <font>
+            <Font name="Baskerville Old Face" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="347.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse:">
+         <font>
+            <Font name="Baskerville Old Face" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="679.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nº téléphone:">
+         <font>
+            <Font name="Baskerville Old Face" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="347.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+         <font>
+            <Font name="Baskerville Old Face" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="679.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe:">
+         <font>
+            <Font name="Baskerville Old Face" size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="nom" fill="#f4effa" layoutX="399.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="....">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="adresse" fill="#f4effa" layoutX="414.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="....">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="email" fill="#f4effa" layoutX="405.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="....">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="prenom" fill="#f4effa" layoutX="751.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="....">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="telephone" fill="#f4effa" layoutX="785.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="....">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="motPasse" fill="#f4effa" layoutX="777.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="....">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Button layoutX="558.0" layoutY="591.0" mnemonicParsing="false" onAction="#switchToAfficherOrthophonistes" styleClass="NewButton" text="Afficher les orthophonistes" />
+
+
+        <StackPane layoutX="184.0" layoutY="122.0" onMouseClicked="#switchToAcceuil">
+            <padding>
+                <Insets bottom="10" left="10" right="10" top="10" />
+            </padding>
+            <children>
+                <ImageView fitHeight="42.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@pics/icons8-home-page-100.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </StackPane>
+        <ImageView fitHeight="58.0" fitWidth="52.0" layoutX="54.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@pics/icon.png" />
+            </image>
+        </ImageView>
+        <Text fill="WHITE" layoutX="123.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cabinet d'Orthophonie" wrappingWidth="151.20001220703125">
+            <font>
+                <Font name="Baskerville Old Face" size="18.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="94.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu" wrappingWidth="72.0">
+            <font>
+                <Font name="Baskerville Old Face" size="20.0" />
+            </font>
+        </Text>
+        <AnchorPane layoutX="58.0" layoutY="163.0" prefHeight="6.0" prefWidth="114.0" style="-fx-background-color: #6e3ba2;" />
+        <ImageView fitHeight="40.0" fitWidth="52.0" layoutX="222.0" layoutY="612.0" onMouseClicked="#switchToConnexion" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@pics/icons8-logout-96.png" />
+            </image>
+        </ImageView>
+
+
+    </children>
+</AnchorPane>

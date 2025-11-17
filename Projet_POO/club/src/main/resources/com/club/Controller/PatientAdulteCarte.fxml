@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="336.0" prefWidth="480.0" style="-fx-background-color: #f4effa; -fx-border-color: #000000; -fx-border-width: 3;" stylesheets="@Styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.club.Controller.PatientAdultCarteController">
+    <children>
+        <Rectangle arcHeight="10.0" arcWidth="10.0" height="20.0" layoutX="37.0" layoutY="271.0" stroke="BLACK" strokeType="INSIDE" width="55.0" />
+        <Rectangle arcHeight="10.0" arcWidth="10.0" height="20.0" layoutX="37.0" layoutY="245.0" stroke="BLACK" strokeType="INSIDE" width="74.0" />
+        <Rectangle arcHeight="10.0" arcWidth="10.0" height="20.0" layoutX="37.0" layoutY="214.0" stroke="BLACK" strokeType="INSIDE" width="74.0" />
+        <Rectangle arcHeight="10.0" arcWidth="10.0" height="20.0" layoutX="37.0" layoutY="185.0" stroke="BLACK" strokeType="INSIDE" width="63.0" />
+        <Rectangle arcHeight="10.0" arcWidth="10.0" height="20.0" layoutX="37.0" layoutY="152.0" stroke="BLACK" strokeType="INSIDE" width="121.0" />
+        <Rectangle arcHeight="10.0" arcWidth="10.0" height="20.0" layoutX="34.0" layoutY="119.0" stroke="BLACK" strokeType="INSIDE" width="129.0" />
+        <Rectangle arcHeight="10.0" arcWidth="10.0" height="20.0" layoutX="33.0" layoutY="89.0" stroke="BLACK" strokeType="INSIDE" width="63.0" />
+        <Rectangle arcHeight="10.0" arcWidth="10.0" height="20.0" layoutX="34.0" layoutY="61.0" stroke="BLACK" strokeType="INSIDE" width="46.0" />
+        <Text fill="#3c096c" layoutX="194.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adulte">
+            <font>
+                <Font name="Baskerville Old Face" size="28.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="38.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom:">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="38.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prénom:">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="38.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date de naissance:">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="38.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lieu de naissance:">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="38.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse:">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="38.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diplôme:">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="38.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profession:">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="38.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nº tel:">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <VBox layoutX="2.0" layoutY="-1.0" prefHeight="111.0" prefWidth="26.0" style="-fx-background-color: black;" />
+        <!-- Linking FXML elements to the controller -->
+        <Text fx:id="nomText" fill="#3c096c" layoutX="102.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="prenomText" fill="#3c096c" layoutX="116.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="dateNaissanceText" fill="#3c096c" layoutX="180.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="lieuNaissanceText" fill="#3c096c" layoutX="180.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="adresseText" fill="#3c096c" layoutX="116.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="diplomeText" fill="#3c096c" layoutX="130.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="professionText" fill="#3c096c" layoutX="120.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="telephoneText" fill="#3c096c" layoutX="102.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <ImageView fitHeight="52.0" fitWidth="60.0" layoutX="414.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@pics/icons8-patient-100.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>
